@@ -1,0 +1,11 @@
+def gcd(arg1, arg2):
+    while arg2 > 0: arg1,arg2 = arg2, arg1%arg2
+    return arg1
+def contest1(arg1, arg2):
+    result = arg1*arg2/gcd(arg1,arg2)
+    return result
+
+num1 = int(raw_input("Enter the first number:\n"))
+num2 = int(raw_input("Enter the second number:\n"))
+
+print "the lcm is ", contest1(num1, num2)

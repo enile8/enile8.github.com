@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+	char str [256];
+	puts("Enter some text you would like to add to the file:");
+	fgets(str,255,stdin);
+	FILE * pFile;
+	pFile = fopen("myfile.txt", "a");
+	if (pFile==NULL)
+	{
+		pFile = fopen("myfile.txt", "w");
+	}
+	else if (pFile!=NULL)
+	{
+		fputs(str,pFile);
+		fclose(pFile);
+	}
+	return 0;
+}

@@ -1,0 +1,306 @@
+/*------------------------------------*\
+	RESET
+\*------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ 
+	margin:0;
+	padding:0;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img{ 
+	border:0;
+}
+address,caption,cite,dfn,th,var{
+	font-style:normal;
+	font-weight:normal;
+}
+caption,th{
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after{
+	content:'';
+}
+abbr,acronym{
+	border:0;
+}
+
+/*------------------------------------*\
+	QUAKING LINKS
+\*------------------------------------*/
+
+@keyframes linkQuake {
+	0%   { 
+		transform: translate(2px, 1px)   rotate(0deg); 
+	}
+	10%  { 
+		transform: translate(-1px, -2px) rotate(-1deg); 
+	}
+	20%  { 
+		transform: translate(-3px, 0px)  rotate(1deg); 
+	}
+	30%  { 
+		transform: translate(0px, 2px)   rotate(0deg); 
+	}
+	40%  { 
+		transform: translate(1px, -1px)  rotate(1deg); 
+	}
+	50%  { 
+		transform: translate(-1px, 1px)  rotate(-1deg); 
+	}
+	60%  { 
+		transform: translate(-3px, -2px)  rotate(0deg); 
+	}
+	70%  { 
+		transform: translate(2px, 1px)   rotate(-1deg); 
+	}
+	80%  { 
+		transform: translate(-1px, -2px) rotate(1deg); 
+	}
+	90%  { 
+		transform: translate(2px, -1px)   rotate(0deg); 
+	}
+	100% { 
+		transform: translate(1px, -2px)  rotate(-1deg); 
+	}
+}
+
+@-moz-keyframes linkQuake { /* Firefox */
+	0%   { 
+		-moz-transform: translate(2px, 1px)   rotate(0deg); 
+	}
+	10%  { 
+		-moz-transform: translate(-1px, -2px) rotate(-1deg); 
+	}
+	20%  { 
+		-moz-transform: translate(-3px, 0px)  rotate(1deg); 
+	}
+	30%  { 
+		-moz-transform: translate(0px, 2px)   rotate(0deg); 
+	}
+	40%  { 
+		-moz-transform: translate(1px, -1px)  rotate(1deg); 
+	}
+	50%  { 
+		-moz-transform: translate(-1px, 1px)  rotate(-1deg); 
+	}
+	60%  { 
+		-moz-transform: translate(-3px, -2px)  rotate(0deg); 
+	}
+	70%  { 
+		-moz-transform: translate(2px, 1px)   rotate(-1deg); 
+	}
+	80%  { 
+		-moz-transform: translate(-1px, -2px) rotate(1deg); 
+	}
+	90%  { 
+		-moz-transform: translate(2px, -1px)   rotate(0deg); 
+	}
+	100% { 
+		-moz-transform: translate(1px, -2px)  rotate(-1deg); 
+	}
+}
+
+@-webkit-keyframes linkQuake { /* Safari and Chrome */
+	0%   { 
+		-webkit-transform: translate(2px, 1px)   rotate(0deg); 
+	}
+	10%  { 
+		-webkit-transform: translate(-1px, -2px) rotate(-1deg); 
+	}
+	20%  { 
+		-webkit-transform: translate(-3px, 0px)  rotate(1deg); 
+	}
+	30%  { 
+		-webkit-transform: translate(0px, 2px)   rotate(0deg); 
+	}
+	40%  { 
+		-webkit-transform: translate(1px, -1px)  rotate(1deg); 
+	}
+	50%  { 
+		-webkit-transform: translate(-1px, 1px)  rotate(-1deg); 
+	}
+	60%  { 
+		-webkit-transform: translate(-3px, -2px)  rotate(0deg); 
+	}
+	70%  { 
+		-webkit-transform: translate(2px, 1px)   rotate(-1deg); 
+	}
+	80%  { 
+		-webkit-transform: translate(-1px, -2px) rotate(1deg); 
+	}
+	90%  { 
+		-webkit-transform: translate(2px, -1px)   rotate(0deg); 
+	}
+	100% { 
+		-webkit-transform: translate(1px, -2px)  rotate(-1deg); 
+	}
+} 
+
+
+/*------------------------------------*\
+	MAIN
+\*------------------------------------*/
+html{
+	font-family:Calibri, Arial, Verdana, sans-serif;
+	background:url(./images/Cincinnati_Skyline_Outline.png) bottom left repeat-x fixed #222;
+	color:#fff;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+}
+body{
+	width:940px;
+	padding:10px;
+	margin:0 auto;
+}
+#wrapper{
+	position:relative;
+	z-index:5;
+}
+h1{
+	font-weight:bold;
+	font-size:1.5em;
+	margin-bottom:20px;
+}
+a{
+	color:#fff;
+}
+
+#credits {
+	position: fixed;
+	bottom: 42px;
+	right: 32px;
+}
+#credits a {
+	color: #3ffc00;
+	font-size: 21px;
+	font-weight:bold;
+	font-style:italic;
+	font-family:Georgia, "Bitstream Charter", serif;
+	letter-spacing:2px;
+	text-decoration: none;
+	text-shadow: 4px 3px 16px #99FF66;
+	padding: 13px;
+}
+#credits a:hover,
+#credits a:focus {
+	animation-name: linkQuake;
+		-moz-animation-name: linkQuake;
+		-webkit-animation-name: linkQuake;
+	animation-duration: 0.8s;
+		-moz-animation-duration: 0.8s;
+		-webkit-animation-duration: 0.8s;
+	transform-origin:50% 50%;
+		-moz-transform-origin:50% 50%;
+		-webkit-transform-origin:50% 50%;
+	animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-webkit-animation-timing-function: linear;
+}
+
+/*------------------------------------*\
+	ADDTHIS
+\*------------------------------------*/
+
+.addthis_toolbox {
+	position: fixed;
+	bottom: 42px;
+	left: 42px;
+}
+
+
+
+/* Custom Icons */
+.addthis_toolbox .custom_images img{
+    width: 32px;
+
+    height: 32px;
+
+    margin: 0;
+
+    padding: 0;
+    -moz-transition-property: width, height, margin, padding;
+    -webkit-transition-property: width, height, margin, padding;
+    transition-property: width, height, margin, padding;
+    -moz-transition-duration: 4s;
+    -webkit-transition-duration: 4s;  
+    transition-duration: 4s;
+    z-index: 9999;
+
+}
+.addthis_toolbox .custom_images img:hover, .addthis_toolbox .custom_images img:focus{
+
+    width: 64px;
+
+    height: 64px;
+    margin: -32px;
+
+    padding: -32px;
+    -moz-transition-property: width, height, margin, padding;
+    -webkit-transition-property: width, height, margin, padding;
+    transition-property: width, height, margin, padding;
+    -moz-transition-duration: 4s;
+    -webkit-transition-duration: 4s;  
+    transition-duration: 4s;
+    opacity: 1;
+}
+
+
+/*------------------------------------*\
+	SNOWFLAKES
+\*------------------------------------*/
+#snow{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  overflow:hidden;
+}
+.snowflake{
+	text-shadow:none;
+	position:absolute;
+	top:0;
+	-moz-animation-name:snowflake-animation;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-timing-function:linear;
+	-webkit-animation-name:snowflake-animation;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+.snowflake:before{
+	content:"*";
+}
+@-moz-keyframes snowflake-animation{
+	from{
+		top:0%;
+		-moz-transform:rotate(0deg);
+	}
+	50%{
+		-moz-transform:rotate(360deg);
+	}
+	to{
+		top:100%;
+		-moz-transform:rotate(0deg);
+	}
+}
+@-webkit-keyframes snowflake-animation{
+	from{
+		top:0%;
+		-webkit-transform:rotate(0deg);
+	}
+	50%{
+		-webkit-transform:rotate(360deg);
+	}
+	to{
+		top:100%;
+		-webkit-transform:rotate(0deg);
+	}
+}

@@ -1,0 +1,56 @@
+" define your colors for todo task note in code
+if !exists("autocmd_colorscheme_loaded")
+  let autocmd_colorscheme_loaded = 1
+  autocmd ColorScheme * highlight TodoRed      ctermbg=darkgreen guibg=#002b37 ctermfg=LightRed     guifg=#E01B1B
+  autocmd ColorScheme * highlight TodoOrange   ctermbg=darkgreen guibg=#002b37 ctermfg=LightMagenta guifg=#E0841B
+  autocmd ColorScheme * highlight TodoYellow   ctermbg=darkgreen guibg=#002b37 ctermfg=LightYellow  guifg=#E0D91B
+endif
+  if has("autocmd")
+    if v:version > 701
+      autocmd Syntax * call matchadd('TodoRed',  '\W\zs\(TODO1\)')
+      autocmd Syntax * call matchadd('TodoOrange', '\W\zs\(TODO2\)')
+      autocmd Syntax * call matchadd('ToDoYellow', '\W\zs\(TODO3\)')
+    endif
+  endif
+
+"General Settings
+set ruler 		"show the cursor position all the time
+set autoread		"auto read when the file is changed from the outside
+
+filetype on 		"file type detection
+filetype indent on 
+filetype plugin on
+
+"path to pydiction plugin
+let g:pydiction_location = '~/.pydiction/complete-dict'
+
+" auto reload vimrc when editing it
+autocmd! bufwritepost .vimrc source ~/.vimrc
+
+syntax on
+
+if has("gui_running")	" GUI color and font settings
+  set guifont=Monospace
+  set background=dark 
+  set t_Co=256          " 256 color mode
+  set cursorline        " highlight current line
+  
+else
+" terminal color settings
+  colors vgod
+endif
+
+" Remove toolbar, left scrollbar and right scrollbar
+"	set guioptions-=T
+"    	set guioptions-=l
+"    	set guioptions-=L
+"    	set guioptions-=r
+"    	set guioptions-=R
+
+set autoindent
+colorscheme desert
+set number
+set showmatch		" Cursor shows matching ) and }
+set showmode		" Show current mode
+set smartcase		" ignore case if search pattern is all lowercase,case-sensitive otherwise
+set mouse=a 		" enable using the mouse if terminal emulator
