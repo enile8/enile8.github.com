@@ -1,0 +1,23 @@
+.waiting {
+	text-align: center;
+}
+p {
+  margin-bottom: 14px;
+}
+.switch a {
+  color: #009cff;
+  text-decoration: none;
+}
+.switch a:hover {
+  color: #ff6100;
+  text-decoration: underline;
+}
+.strength {
+  display: none;
+  height: 6px;
+  max-width: 276px;
+}
+.taken {
+  display: none;
+  width: 265px!important;
+}
